@@ -1,9 +1,9 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Cardapio() {
+export default function Menu() {
   return (
-    <View style={{flex:1, alignItems:'center', justifyContent:'center',}}>
+    <View >
       <Text style={{fontSize:35}}>tela Cardapio</Text>
     </View>
   )

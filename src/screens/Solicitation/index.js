@@ -1,9 +1,9 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Solicitação() {
+export default function Solicitation() {
   return (
-    <View style={{flex:1, alignItems:'center', justifyContent:'center',}}>
+    <View >
       <Text style={{fontSize:35}}>tela Solicitação</Text>
     </View>
   )

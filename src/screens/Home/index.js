@@ -1,10 +1,24 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, ScrollView, } from 'react-native';
+import { smallList } from '../../assets/data/mock';
+import React from 'react';
+import styles from './styles';
+import TopBar from './components/TopBar';
+import WelcomeBar from './components/WelcomeBar/index.js';
+import News from './components/News';
+import SmallCard from './components/smallCard';
 
-export default function Home() {
+export default function Home({ navigation }) {
+  const detailedNews = () => {
+    navigation.navigate('NewsDetails')
+  }
   return (
-    <View style={{flex:1, alignItems:'center', justifyContent:'center',}}>
-      <Text style={{fontSize:35}}>tela home</Text>
+    <View style={styles.container}>
+      <TopBar />
+      <ScrollView showsVerticalScrollIndicator={false} style={{ margin: 10,}}>
+        <WelcomeBar />
+        <News />
+        <SmallCard data={smallList} navigator={ detailedNews }/>
+      </ScrollView>
     </View>
   )
 }

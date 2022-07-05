@@ -1,1 +1,1 @@
-export const image1 = require('./image1.jpg')
+export const imgNewsRecent = require('../images/newrecent.png');
