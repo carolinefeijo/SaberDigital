@@ -7,16 +7,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'Quicksand-Bold',
-        fontSize: 16,
-        color: C.green
+        fontSize: 15,
+        color: C.green.color10
     },
     descriptionTitle: {
         fontFamily: 'Quicksand-Medium',
         fontSize: 13 ,
-        color: C.green,
+        color: C.green.color10,
         marginTop: 5
     }
-   
-
 });
 export default styles;

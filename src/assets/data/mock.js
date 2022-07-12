@@ -22,7 +22,7 @@ export const smallList = [
     },
     {
         id: '3',
-        title: 'O uso correto das Mascaras ',
+        title: 'Como ter uma ótima adptação ? ',
         description: 'Ter bastante paciência com as possíveis mudanças de comportamento, já que pode causar frustração na criança e evite chorar na frente dos filhos e não fazer comentários sobre a adaptação da criança na presença dela.',
         date: '10  de Janeiro  2021',
         uri: require('./news/3.png')

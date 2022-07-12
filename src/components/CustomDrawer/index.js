@@ -1,31 +1,49 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import styles from './styles'
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
 import { profile } from '../../assets/data/mock'
-import * as C from '../../constants/colors';
 import { getRole, getGenderRole } from '../../helpers'
+import { drawerIconGoOut, drawerIconSetting } from '../../assets/icons';
 
 export default function CustomDrawer(props) {
     return (
-        <View style={{ flex: 1 }}>
-            <View style={{borderBottomWidth: 1, borderBottomColor: '#F4F4F4'}}>
-                <View style={{ padding: 20, flexDirection: 'row', alignItems: 'center' }}>
+        <View style={styles.container}>
+            <View style={styles.lineContainer}>
 
-                    <Image style={{ width: 55, height: 55, borderRadius: 55 }}
+                <View style={styles.dataUserContainer}>
+                    <Image style={styles.imgProfile}
                         source={profile.image} />
 
-                    <View style={{ alignItems: 'center', flex: 1 }}>
-                        <Text>{profile.firstName}</Text>
-                        <Text>{getGenderRole(profile.role, profile.gender)}</Text>
+                    <View style={styles.userContainer}>
+                        <Text style={styles.username}>{profile.firstName}</Text>
+                        <Text style={styles.role}>{getGenderRole(profile.role, profile.gender)}</Text>
                     </View>
-
                 </View>
+
             </View>
             <DrawerContentScrollView {...props}>
                 <DrawerItemList {...props} />
             </DrawerContentScrollView>
-            <View>
-                <Text>sd</Text>
+
+            <View style={styles.lineContainer}></View>
+            <View style={styles.mainContainerSetting}>
+
+                <View style={styles.mainSetting}>
+                    <Image source={drawerIconSetting} />
+                    <TouchableOpacity onPress={() => { navigator() }}>
+                        <Text style={styles.titleSetting}>Configurações</Text>
+                    </TouchableOpacity>
+                    <View></View>
+                </View>
+
+                <View style={styles.mainGoOut}>
+                    <Image source={drawerIconGoOut} />
+                    <TouchableOpacity onPress={() => { navigator() }}>
+                        <Text style={styles.titleGoOut}>Sair</Text>
+                    </TouchableOpacity>
+                </View>
+
             </View>
         </View>
     )

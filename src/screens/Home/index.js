@@ -11,13 +11,16 @@ export default function Home({ navigation }) {
   const detailedNews = () => {
     navigation.navigate('NewsDetails')
   }
+  const OpenDrawer = () => {
+    navigation.openDrawer()
+  }
   return (
     <View style={styles.container}>
-      <TopBar />
-      <ScrollView showsVerticalScrollIndicator={false} style={{ margin: 10,}}>
+      <TopBar OpenNavigator={OpenDrawer} />
+      <ScrollView showsVerticalScrollIndicator={false} style={{ margin: 10}}>
         <WelcomeBar />
         <News />
-        <SmallCard data={smallList} navigator={ detailedNews }/>
+        <SmallCard data={smallList} navigator={detailedNews} />
       </ScrollView>
     </View>
   )

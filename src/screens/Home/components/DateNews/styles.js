@@ -17,15 +17,15 @@ const styles = StyleSheet.create({
         height: 14,
     },
     iconCalendar: {
-        marginTop: 2,
+        marginTop: 4,
         width: 10,
         height: 10
     },
     title: {
         marginLeft: 10,
         fontFamily: 'Quicksand-Medium',
-        fontSize: 10,
-        color: C.green
+        fontSize: 11,
+        color: C.green.color20
     }
 });
 export default styles;

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 22,
         fontFamily: 'Quicksand-Bold',
-        color: C.green
+        color: C.green.color10
     }
 });
 export default styles;

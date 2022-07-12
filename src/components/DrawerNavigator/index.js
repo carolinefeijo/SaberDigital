@@ -9,7 +9,7 @@ import Menu from '../../screens/Menu';
 import Solicitation from '../../screens/Solicitation';
 import Calendar from '../../screens/Calendar';
 import CustomDrawer from '../CustomDrawer';
-import { drawerIconCalendar } from '../../assets/icons';
+import { drawerIconHome, drawerIconBook, drawerIconChat, drawerIconMenu, drawerIconNotification, drawerIconCalendario } from '../../assets/icons';
 
 
 const Drawer = createDrawerNavigator();
@@ -17,14 +17,23 @@ const Drawer = createDrawerNavigator();
 export default function DrawerNavigator() {
     return (
         <Drawer.Navigator
-            initialRouteName='Home'
-            drawerContent={props => <CustomDrawer {...props} />}>
+            drawerContent={props => <CustomDrawer {...props} />}
+            screenOptions={{
+                headerShown: false,
+                drawerActiveBackgroundColor: '#2DA7FF',
+                drawerActiveTintColor: 'white',
+                drawerLabelStyle: {
+                    fontFamily: 'Quicksand-Bold',
+                    fontSize: 14,
+                }
+            }}
+        >
             <Drawer.Screen
                 options={{
                     headerShown: false,
-                    drawerIcon:( ) => ( 
-                        <Image style={{width: 20, heigth: 20}}
-                        source={drawerIconCalendar}/>
+                    drawerIcon: () => (
+                        <Image style={{ width: 18, height: 20, }}
+                            source={drawerIconHome} />
                     )
                 }}
                 name="Home"
@@ -33,14 +42,22 @@ export default function DrawerNavigator() {
 
             <Drawer.Screen
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    drawerIcon: () => (
+                        <Image style={{ width: 18, height: 17 }}
+                            source={drawerIconBook} />
+                    )
                 }}
                 name="Diario"
                 component={Daily} />
 
             <Drawer.Screen
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    drawerIcon: () => (
+                        <Image style={{ width: 18, height: 19 }}
+                            source={drawerIconChat} />
+                    )
                 }}
                 name="Chat"
                 component={Chat}
@@ -48,7 +65,11 @@ export default function DrawerNavigator() {
 
             <Drawer.Screen
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    drawerIcon: () => (
+                        <Image style={{ width: 18, height: 18 }}
+                            source={drawerIconMenu} />
+                    )
                 }}
                 name="Cardapio"
                 component={Menu}
@@ -56,7 +77,11 @@ export default function DrawerNavigator() {
 
             <Drawer.Screen
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    drawerIcon: () => (
+                        <Image style={{ width: 18, height: 22 }}
+                            source={drawerIconNotification} />
+                    )
                 }}
                 name="Solicitação"
                 component={Solicitation}
@@ -64,11 +89,16 @@ export default function DrawerNavigator() {
 
             <Drawer.Screen
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    drawerIcon: () => (
+                        <Image style={{ width: 18, height: 21 }}
+                            source={drawerIconCalendario} />
+                    )
                 }}
                 name="Calendario"
                 component={Calendar}
             />
+
 
         </Drawer.Navigator>
     )
