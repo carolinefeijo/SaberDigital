@@ -1,14 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import TopBarSecundar from '../../components/TopBarSecundar'
+import TopBar from './Components/TopBar'
+import styles from './styles'
 
 export default function Daily({ navigation }) {
   const goBack = () => {
     navigation.goBack()
   }
   return (
-    <View style={{ flex: 1, backgroundColor: 'white' }}>
-      <TopBarSecundar navigator={goBack} />
+    <View style={styles.container}>
+      <TopBar navigator={goBack} />
     </View>
   )
 }

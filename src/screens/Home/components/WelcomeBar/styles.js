@@ -3,17 +3,17 @@ import * as C from '../../../../constants/colors';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, 
+        flex: 1,
     },
     title: {
         fontFamily: 'Quicksand-Bold',
         fontSize: 15,
-        color: C.green.color10
+        color: C.darkGrey.color10
     },
     descriptionTitle: {
         fontFamily: 'Quicksand-Medium',
-        fontSize: 13 ,
-        color: C.green.color10,
+        fontSize: 13,
+        color: C.darkGrey.color10,
         marginTop: 5
     }
 });

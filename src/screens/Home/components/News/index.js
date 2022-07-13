@@ -7,6 +7,7 @@ import DateNews from '../DateNews'
 export default function News() {
     return (
         <View style={styles.container}>
+
             <View style={styles.biggerContainer}>
                 <Image style={styles.imgBigger}
                     source={imgNewsRecent} />
@@ -15,6 +16,7 @@ export default function News() {
             <View style={styles.titleContainer}>
                 <Text style={styles.titleNews}>Crianças descobrem o amor por ler</Text>
             </View>
+
             <DateNews />
         </View>
     )

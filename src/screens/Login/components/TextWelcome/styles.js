@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         marginTop: 5,
         fontSize: 12,
         fontFamily: 'Quicksand-Medium',
-        color: C.lightGray.color30
+        color: C.lightGrey.color10
     }
 });
 export default styles;

@@ -11,7 +11,7 @@ export default function TopBar({ OpenNavigator }) {
           <Image style={styles.iconDrawer}
             source={iconDrawer} />
         </TouchableOpacity>
-        <Text style={styles.title}>Saber Digital</Text>
+        <Text style={styles.title}>Agenda escolar</Text>
         <View></View>
       </View>
     </View>

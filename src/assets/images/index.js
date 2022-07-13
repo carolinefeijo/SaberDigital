@@ -1,2 +1,6 @@
+// imgNewsInicial 
 export const imgNewsRecent = require('../images/newrecent.png');
-export const saberDigitalLogo = require ('../images/logo.png');
+
+
+// Logo AgendaEscolar
+export const agendaescolarLogo = require ('../images/logo.png');

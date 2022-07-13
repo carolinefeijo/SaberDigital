@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     titleSetting: {
         marginLeft: 20,
-        color: C.lightGray2.color30,
+        color: C.darkGrey.color60,
         fontFamily: 'Quicksand-Bold',
         fontSize: 14
     },
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     },
     titleGoOut: {
         marginLeft: 22,
-        color: C.lightGray2.color30,
+        color: C.darkGrey.color60,
         fontFamily: 'Quicksand-Bold',
         fontSize: 14
     }

@@ -9,13 +9,15 @@ const styles = StyleSheet.create({
     mainContainer: {
         width: '100%',
         height: 110,
+        borderRadius: 7,
         flexDirection: 'row',
         marginBottom: 2,
         backgroundColor: '#FFFFFF',
-        shadowColor: "#000",
+        shadowColor: C.black.color10,
         shadowOffset: {
             width: 0,
             height: 5,
+            
         },
         shadowOpacity: 0.58,
         elevation: 2,
@@ -41,13 +43,13 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'Quicksand-Bold',
         fontSize: 13,
-        color: C.green.color10
+        color: C.darkGrey.color10
     },
     textsDescription: {
         marginTop: 5,
         fontFamily: 'Quicksand-Medium',
         fontSize: 11,
-        color: C.lightGray.color20
+        color: C.darkGrey.color40
     },
     
 

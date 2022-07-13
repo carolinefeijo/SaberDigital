@@ -17,7 +17,7 @@ export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <TopBar OpenNavigator={OpenDrawer} />
-      <ScrollView showsVerticalScrollIndicator={false} style={{ margin: 10}}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{ margin: 10 }}>
         <WelcomeBar />
         <News />
         <SmallCard data={smallList} navigator={detailedNews} />

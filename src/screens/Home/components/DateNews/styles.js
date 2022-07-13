@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         fontFamily: 'Quicksand-Medium',
         fontSize: 11,
-        color: C.green.color20
+        color: C.darkGrey.color20
     }
 });
 export default styles;

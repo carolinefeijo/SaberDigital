@@ -13,7 +13,7 @@ export default function InputLogin({ email, setEmail }) {
                 <TextInput
                     style={styles.emailInput}
                     placeholder="Email"
-                    placeholderTextColor={C.lightGray.color10}
+                    placeholderTextColor={C.darkGrey.color30}
                     value={email}
                     onChangeText={setEmail}
                 />
@@ -27,7 +27,7 @@ export default function InputLogin({ email, setEmail }) {
                     <TextInput
                         style={styles.passwordInput}
                         placeholder="Senha"
-                        placeholderTextColor={C.lightGray.color10}
+                        placeholderTextColor={C.darkGrey.color30}
                         secureTextEntry={security}
                     />
 
@@ -38,13 +38,13 @@ export default function InputLogin({ email, setEmail }) {
                     </TouchableOpacity>
 
                 </View>
+
                 <TouchableOpacity
                     onPress={() => { }}>
                     <Text style={styles.resetPassword}>Esqueceu sua senha?</Text>
                 </TouchableOpacity>
+
             </View>
-
-
         </View>
     )
 }

@@ -11,18 +11,17 @@ export default function SmallCard({ data, navigator }) {
         <TouchableOpacity
           activeOpacity={0.9}
           onPress={() => { navigator() }}>
+
           <View style={styles.mainContainer}>
 
             <View style={styles.imgContainer}>
-              <Image
-                style={styles.imgNew}
+              <Image style={styles.imgNew}
                 source={item.uri}>
               </Image>
             </View>
 
             <View style={styles.textsContainer}>
-              <Text
-                style={styles.title}>
+              <Text style={styles.title}>
                 {item.title}
               </Text>
 
@@ -30,6 +29,7 @@ export default function SmallCard({ data, navigator }) {
                 style={styles.textsDescription}>
                 {item.description}
               </Text>
+
               <DateNews />
             </View>
 

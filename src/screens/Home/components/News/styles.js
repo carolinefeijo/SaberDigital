@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     titleNews: {
         fontSize: 13,
         fontFamily: 'Quicksand-Bold',
-        color: C.green.color10
+        color: C.darkGrey.color10
     },
 
 

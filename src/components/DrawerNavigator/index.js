@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import 'react-native-gesture-handler';
+import * as C from '../../constants/colors';
 import Home from '../../screens/Home'
 import Daily from '../../screens/Daily';
 import Chat from '../../screens/Chat';
@@ -20,8 +21,8 @@ export default function DrawerNavigator() {
             drawerContent={props => <CustomDrawer {...props} />}
             screenOptions={{
                 headerShown: false,
-                drawerActiveBackgroundColor: '#2DA7FF',
-                drawerActiveTintColor: 'white',
+                drawerActiveBackgroundColor: C.blue.color10,
+                drawerActiveTintColor: C.white.color0,
                 drawerLabelStyle: {
                     fontFamily: 'Quicksand-Bold',
                     fontSize: 14,

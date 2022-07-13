@@ -1,7 +1,7 @@
 import { Image, View, Text, ActivityIndicator } from 'react-native'
 import React, { useEffect } from 'react'
 import styles from './styles'
-import { saberDigitalLogo } from '../../assets/images/index'
+import { agendaescolarLogo } from '../../assets/images/index'
 
 export default function Preload({ navigation }) {
   useEffect(() => {
@@ -14,11 +14,11 @@ export default function Preload({ navigation }) {
     <View style={styles.container}>
       <View style={styles.mainContainer}>
         <Image style={styles.imgLogo}
-          source={saberDigitalLogo} />
+          source={agendaescolarLogo} />
 
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>SABER </Text>
-          <Text style={styles.title}>DIGITAL</Text>
+          <Text style={styles.title}>AGENDA </Text>
+          <Text style={styles.title}>ESCOLAR</Text>
         </View>
 
       </View>

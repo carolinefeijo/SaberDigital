@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'white',
+        backgroundColor: C.white.color0,
     },
     mainContainer: {
         flexDirection: 'row',
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'Quicksand-Regular',
-        color: C.green.color10,
+        color: C.darkGrey.color10,
         fontSize: 19
     },
     loadingContainer: {

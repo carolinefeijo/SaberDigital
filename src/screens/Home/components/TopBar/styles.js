@@ -16,9 +16,9 @@ const styles = StyleSheet.create({
         height: 12
     },
     title: {
-        fontSize: 22,
+        fontSize: 20,
         fontFamily: 'Quicksand-Bold',
-        color: C.green.color10
+        color: C.darkGrey.color10
     }
 });
 export default styles;

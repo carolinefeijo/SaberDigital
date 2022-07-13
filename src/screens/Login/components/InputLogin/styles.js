@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     passwordInputContainer: {
         borderBottomWidth: 1,
         flexDirection: 'row',
-        borderBottomColor: C.lightGray2.color30,
+        borderBottomColor: C.darkGrey.color60,        
         height: 50,
         alignItems: 'center',
         justifyContent: 'space-between'
@@ -23,13 +23,13 @@ const styles = StyleSheet.create({
         width: '100%',
         fontFamily: "Quicksand-Regular",
         fontSize: 16,
-        color: '#3E3D3D'
+        color: C.black.color20
     },
     passwordInput: {
         width: '90%',
         fontFamily: "Quicksand-Regular",
         fontSize: 16,
-        color: '#3E3D3D'
+        color: C.black.color20
     },
     buttonLogin: {
         width: '10%',
