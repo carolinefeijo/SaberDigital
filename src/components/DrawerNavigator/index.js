@@ -16,9 +16,10 @@ import { drawerIconHome, drawerIconBook, drawerIconChat, drawerIconMenu, drawerI
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
+    // console.log(user)
     return (
         <Drawer.Navigator
-            drawerContent={props => <CustomDrawer {...props} />}
+            drawerContent={props => <CustomDrawer {...props}  />}
             screenOptions={{
                 headerShown: false,
                 drawerActiveBackgroundColor: C.blue.color10,

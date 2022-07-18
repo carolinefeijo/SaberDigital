@@ -1,12 +1,17 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, {useContext } from 'react'
 import styles from './styles'
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
 import { profile } from '../../assets/data/mock'
 import { getRole, getGenderRole } from '../../helpers'
 import { drawerIconGoOut, drawerIconSetting } from '../../assets/icons';
+import UserContext from '../../context/UserContext'
 
 export default function CustomDrawer(props) {
+
+    const user = useContext(UserContext);
+
+
     return (
         <View style={styles.container}>
             <View style={styles.lineContainer}>
@@ -16,7 +21,7 @@ export default function CustomDrawer(props) {
                         source={profile.image} />
 
                     <View style={styles.userContainer}>
-                        <Text style={styles.username}>{profile.firstName}</Text>
+                        <Text style={styles.username}>{user.firstName}</Text>
                         <Text style={styles.role}>{getGenderRole(profile.role, profile.gender)}</Text>
                     </View>
                 </View>
