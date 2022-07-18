@@ -30,7 +30,8 @@ export default function CustomDrawer(props) {
             <View style={styles.mainContainerSetting}>
 
                 <View style={styles.mainSetting}>
-                    <Image source={drawerIconSetting} />
+                    <Image style={styles.iconSettings}
+                        source={drawerIconSetting} />
                     <TouchableOpacity onPress={() => { navigator() }}>
                         <Text style={styles.titleSetting}>Configurações</Text>
                     </TouchableOpacity>
@@ -38,7 +39,9 @@ export default function CustomDrawer(props) {
                 </View>
 
                 <View style={styles.mainGoOut}>
-                    <Image source={drawerIconGoOut} />
+                    <Image 
+                    style={styles.iconGoOut}
+                    source={drawerIconGoOut} />
                     <TouchableOpacity onPress={() => { navigator() }}>
                         <Text style={styles.titleGoOut}>Sair</Text>
                     </TouchableOpacity>

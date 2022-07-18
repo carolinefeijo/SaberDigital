@@ -45,7 +45,7 @@ export default function DrawerNavigator() {
                 options={{
                     headerShown: false,
                     drawerIcon: () => (
-                        <Image style={{ width: 18, height: 17 }}
+                        <Image style={{ width: 18, height:15}}
                             source={drawerIconBook} />
                     )
                 }}
@@ -68,7 +68,7 @@ export default function DrawerNavigator() {
                 options={{
                     headerShown: false,
                     drawerIcon: () => (
-                        <Image style={{ width: 18, height: 18 }}
+                        <Image style={{ width: 18, height: 23 }}
                             source={drawerIconMenu} />
                     )
                 }}
@@ -80,7 +80,7 @@ export default function DrawerNavigator() {
                 options={{
                     headerShown: false,
                     drawerIcon: () => (
-                        <Image style={{ width: 18, height: 22 }}
+                        <Image style={{ width: 18, height: 21 }}
                             source={drawerIconNotification} />
                     )
                 }}

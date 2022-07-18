@@ -49,3 +49,6 @@ export default function SmallCard({ data, navigator }) {
     </View>
   )
 }
+
+
+

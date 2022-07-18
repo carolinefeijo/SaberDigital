@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end'
     },
     iconEye: {
-        width: 19,
-        height: 12
+        width: 15,
+        height: 10
     },
     resetPassword: {
         marginTop: 5,

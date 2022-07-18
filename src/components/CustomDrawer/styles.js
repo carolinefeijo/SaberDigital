@@ -46,16 +46,25 @@ const styles = StyleSheet.create({
         fontFamily: 'Quicksand-Bold',
         fontSize: 14
     },
+    iconSettings: {
+        width: 18,
+        height: 19
+    },
     mainGoOut: {
         alignItems: 'center',
         flexDirection: 'row',
-        marginTop: 13
+        marginTop: 18
     },
     titleGoOut: {
         marginLeft: 22,
         color: C.darkGrey.color60,
         fontFamily: 'Quicksand-Bold',
         fontSize: 14
+    },
+    iconGoOut: {
+        marginLeft: 2,
+        width: 16,
+        height: 16
     }
 
 

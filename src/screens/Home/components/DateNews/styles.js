@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
         height: 14,
     },
     iconCalendar: {
-        marginTop: 4,
+        marginTop: 2,
         width: 10,
-        height: 10
+        height: 12
     },
     title: {
         marginLeft: 10,
