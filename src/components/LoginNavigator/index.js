@@ -7,7 +7,7 @@ import Preload from '../../screens/Preload'
 
 const Stack = createStackNavigator();
 
-export default function LoginNavigator({logged, setLogged, setUser}) {
+export default function LoginNavigator({ setUser}) {
   return (
     <Stack.Navigator
     initialRouteName='Preload'
@@ -18,7 +18,7 @@ export default function LoginNavigator({logged, setLogged, setUser}) {
       <Stack.Screen
         name="Login"
         component={Login}
-        initialParams={{ logged, setLogged, setUser}} 
+        initialParams={{ setUser}} 
          />
 
       <Stack.Screen

@@ -3,7 +3,6 @@ import *  as C from '../../../../constants/colors'
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         backgroundColor: 'white',
         alignItems: 'center'
     },

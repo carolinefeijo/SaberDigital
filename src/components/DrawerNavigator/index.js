@@ -12,14 +12,12 @@ import Calendar from '../../screens/Calendar';
 import CustomDrawer from '../CustomDrawer';
 import { drawerIconHome, drawerIconBook, drawerIconChat, drawerIconMenu, drawerIconNotification, drawerIconCalendario } from '../../assets/icons';
 
-
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
-    // console.log(user)
     return (
         <Drawer.Navigator
-            drawerContent={props => <CustomDrawer {...props}  />}
+            drawerContent={props => <CustomDrawer {...props} />}
             screenOptions={{
                 headerShown: false,
                 drawerActiveBackgroundColor: C.blue.color10,
@@ -46,7 +44,7 @@ export default function DrawerNavigator() {
                 options={{
                     headerShown: false,
                     drawerIcon: () => (
-                        <Image style={{ width: 18, height:15}}
+                        <Image style={{ width: 18, height: 15 }}
                             source={drawerIconBook} />
                     )
                 }}

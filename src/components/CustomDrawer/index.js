@@ -6,9 +6,15 @@ import { profile } from '../../assets/data/mock'
 import { getRole, getGenderRole } from '../../helpers'
 import { drawerIconGoOut, drawerIconSetting } from '../../assets/icons';
 import UserContext from '../../context/UserContext'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function CustomDrawer(props) {
     const user = useContext(UserContext);
+
+    async function exitApp() {
+        await AsyncStorage.removeItem('@EMAIL')
+        await AsyncStorage.removeItem('@PASSWORD')
+    }
 
     return (
         <View style={styles.container}>
@@ -45,7 +51,7 @@ export default function CustomDrawer(props) {
                     <Image
                         style={styles.iconGoOut}
                         source={drawerIconGoOut} />
-                    <TouchableOpacity onPress={() => { navigator() }}>
+                    <TouchableOpacity onPress={() => { exitApp() }}>
                         <Text style={styles.titleGoOut}>Sair</Text>
                     </TouchableOpacity>
                 </View>
