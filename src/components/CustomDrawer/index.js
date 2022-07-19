@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
-import React, {useContext } from 'react'
+import React, { useContext } from 'react'
 import styles from './styles'
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
 import { profile } from '../../assets/data/mock'
@@ -8,9 +8,7 @@ import { drawerIconGoOut, drawerIconSetting } from '../../assets/icons';
 import UserContext from '../../context/UserContext'
 
 export default function CustomDrawer(props) {
-
     const user = useContext(UserContext);
-
 
     return (
         <View style={styles.container}>
@@ -18,11 +16,11 @@ export default function CustomDrawer(props) {
 
                 <View style={styles.dataUserContainer}>
                     <Image style={styles.imgProfile}
-                        source={profile.image} />
+                        source={{ uri: user.image }} />
 
                     <View style={styles.userContainer}>
                         <Text style={styles.username}>{user.firstName}</Text>
-                        <Text style={styles.role}>{getGenderRole(profile.role, profile.gender)}</Text>
+                        <Text style={styles.role}>{getGenderRole( user.gender)}</Text>
                     </View>
                 </View>
 
@@ -44,9 +42,9 @@ export default function CustomDrawer(props) {
                 </View>
 
                 <View style={styles.mainGoOut}>
-                    <Image 
-                    style={styles.iconGoOut}
-                    source={drawerIconGoOut} />
+                    <Image
+                        style={styles.iconGoOut}
+                        source={drawerIconGoOut} />
                     <TouchableOpacity onPress={() => { navigator() }}>
                         <Text style={styles.titleGoOut}>Sair</Text>
                     </TouchableOpacity>

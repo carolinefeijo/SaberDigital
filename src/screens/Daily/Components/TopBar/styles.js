@@ -4,6 +4,7 @@ import * as C from '../../../../constants/colors';
 const styles = StyleSheet.create({
     container: {
         padding: 25,
+        backgroundColor: 'white'
     },
     mainContainer: {
         width: '100%',
