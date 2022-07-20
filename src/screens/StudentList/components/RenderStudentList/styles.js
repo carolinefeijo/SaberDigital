@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     mainContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: 20,
+        marginTop: 8,
         width: '90%',
         height: 60,
         borderRadius: 6,
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         color: C.darkGrey.color10,
         fontSize: 13
     },
-    class: {
+    studentClass: {
         marginTop: 4,
         fontFamily: 'Quicksand-Regular',
         color: C.darkGrey.color30,

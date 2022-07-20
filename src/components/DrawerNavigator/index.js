@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import 'react-native-gesture-handler';
 import * as C from '../../constants/colors';
 import Home from '../../screens/Home'
-import Daily from '../../screens/Daily';
 import Chat from '../../screens/Chat';
 import Menu from '../../screens/Menu';
+import Diary from '../../screens/Diary'
 import Solicitation from '../../screens/Solicitation';
 import Calendar from '../../screens/Calendar';
 import CustomDrawer from '../CustomDrawer';
+import StudentList from '../../screens/StudentList'
 import { drawerIconHome, drawerIconBook, drawerIconChat, drawerIconMenu, drawerIconNotification, drawerIconCalendario } from '../../assets/icons';
+import UserContext from '../../context/UserContext';
 
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
+    const user = useContext(UserContext);
     return (
         <Drawer.Navigator
             drawerContent={props => <CustomDrawer {...props} />}
@@ -48,8 +51,8 @@ export default function DrawerNavigator() {
                             source={drawerIconBook} />
                     )
                 }}
-                name="Diario"
-                component={Daily} />
+                name="Diario" 
+                component={user.studentId.length > 1 ? StudentList : Diary} />
 
             <Drawer.Screen
                 options={{

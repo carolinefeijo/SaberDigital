@@ -17,19 +17,19 @@ export default function App() {
   const checkUser = async () => {
     const email = await AsyncStorage.getItem('@EMAIL');
     const password = await AsyncStorage.getItem('@PASSWORD');
-  
+
     if (email != null) {
       const data = await loginData(email, password)
 
-      if(data == "not authorized") {
-        setUserLogged(null) 
+      if (data == "not authorized") {
+        setUserLogged(null)
       } else {
         setUserLogged(data)
       }
+    }
   }
-}
 
-  useEffect( () => {
+  useEffect(() => {
     checkUser();
   }, []);
 
