@@ -1,22 +1,22 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import styles from './styles'
-import { agendaescolarLogo } from '../../../../assets/images/index';
 
-export default function RenderStudentList() {
+export default function RenderStudentList({ item, navigator }) {
     return (
-        <TouchableOpacity onPress={() => { }}>
+        <TouchableOpacity
+            activeOpacity={0.12}
+            onPress={() => {navigator() }}>
 
             <View style={styles.container}>
 
                 <View style={styles.mainContainer}>
                     <Image style={styles.imgChildren}
-                        source={agendaescolarLogo} />
-
+                        source={{ uri: item.image }} />
 
                     <View style={styles.informationsContainer}>
-                        <Text style={styles.Name}>Luis Henrique dos santos</Text>
-                        <Text style={styles.studentClass}>Maternal II</Text>
+                        <Text style={styles.Name}>{item.firstName} {item.lastName}</Text>
+                        <Text style={styles.studentClass}>{item.studentClassName}</Text>
                     </View>
                 </View>
 

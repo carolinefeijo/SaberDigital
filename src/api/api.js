@@ -9,7 +9,6 @@ export async function loginData(email, password) {
     password
   })
     .then(async (response) => {
-
       if (response.data.message == "authorized user") {
         return response.data.responsible
       }
@@ -18,21 +17,16 @@ export async function loginData(email, password) {
       return 'not authorized'
     })
 }
+export async function studentData(studentData) {
 
-export async function studentData(name, description) {
-
-  return await axios.get(`${baseUrl}/student/list`, {
-    name,
-    description
+  return await axios.post(`${baseUrl}/student/list?type=smaill`, {
+    studentId : studentData ,
+    
   })
     .then(async (response) => {
-
-      if (response.data.message == "authorized user") {
-
-        return response.data.student
-      }
+      return response.data
     }).catch((error) => {
 
-      return 
+      return
     })
 }

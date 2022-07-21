@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import 'react-native-gesture-handler';
 import * as C from '../../constants/colors';
 import Home from '../../screens/Home'
@@ -15,6 +17,7 @@ import { drawerIconHome, drawerIconBook, drawerIconChat, drawerIconMenu, drawerI
 import UserContext from '../../context/UserContext';
 
 const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
 
 export default function DrawerNavigator() {
     const user = useContext(UserContext);
@@ -30,7 +33,9 @@ export default function DrawerNavigator() {
                     fontSize: 14,
                 }
             }}
+            initialRouteName="Home"
         >
+
             <Drawer.Screen
                 options={{
                     headerShown: false,
@@ -47,11 +52,25 @@ export default function DrawerNavigator() {
                 options={{
                     headerShown: false,
                     drawerIcon: () => (
+                        <Image style={{ width: 18, height: 20, }}
+                            source={drawerIconHome} />
+                    ),
+                    drawerItemStyle: { display: 'none' }
+                }}
+                name="Diary"
+                component={Diary}
+             
+            />
+
+            <Drawer.Screen
+                options={{
+                    headerShown: false,
+                    drawerIcon: () => (
                         <Image style={{ width: 18, height: 15 }}
                             source={drawerIconBook} />
                     )
                 }}
-                name="Diario" 
+                name="Diario"
                 component={user.studentId.length > 1 ? StudentList : Diary} />
 
             <Drawer.Screen

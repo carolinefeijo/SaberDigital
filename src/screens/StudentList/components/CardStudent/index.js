@@ -1,16 +1,19 @@
-import { View, SafeAreaView, FlatList} from 'react-native'
-import React from 'react'
+import { View, SafeAreaView, FlatList, Text } from 'react-native'
+import React, { useState } from 'react'
 import styles from './styles'
 import RenderStudentList from '../RenderStudentList'
 
-export default function CardStudent({data}) {
+export default function CardStudent({ data, navigator }) {
+    
+
     return (
         <View style={styles.container}>
             <SafeAreaView style={styles.safeAreaContainer}>
                 <FlatList
                     data={data}
-                    renderItem={RenderStudentList}
-                    keyExtractor={(item) => item.id}
+                    renderItem={({ item }) =>
+                        <RenderStudentList item={item} navigator={navigator} />}
+                    keyExtractor={item => item.firstName}
                     horizontal={false}
                     showsHorizontalScrollIndicator={false}
                 />

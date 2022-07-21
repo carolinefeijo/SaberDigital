@@ -8,8 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function CustomDrawer(props) {
     const user = useContext(UserContext);
-    console.log(user.studentId[1])
-
+    
     async function exitApp() {
         await AsyncStorage.removeItem('@EMAIL')
         await AsyncStorage.removeItem('@PASSWORD')
