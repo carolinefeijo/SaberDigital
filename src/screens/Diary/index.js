@@ -3,13 +3,19 @@ import React from 'react'
 import styles from './styles'
 import TopBarTwo from '../../components/TopBarTwo'
 
-export default function Diary({ navigation}) {
+export default function Diary({ navigation  }) {
   const goBack = () => {
     navigation.goBack()
   }
   return (
     <View style={styles.container}>
       <TopBarTwo navigator={goBack} title={"Diario"} />
+      <View>
+       <Text> foto</Text>
+       <Text> nome</Text>
+
+      </View>
+
     </View>
   )
 }

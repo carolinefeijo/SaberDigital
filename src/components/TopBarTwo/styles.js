@@ -3,8 +3,9 @@ import * as C from '../../constants/colors';
 
 const styles = StyleSheet.create({
     container: {
-        padding: 25,
-        backgroundColor: 'white'
+        padding: 20,
+        backgroundColor: 'white',
+        alignItems:'center'
     },
     mainContainer: {
         width: '100%',

@@ -19,7 +19,7 @@ export async function loginData(email, password) {
 }
 export async function studentData(studentData) {
 
-  return await axios.post(`${baseUrl}/student/list?type=smaill`, {
+  return await axios.post(`${baseUrl}/student/list`, {
     studentId : studentData ,
     
   })
