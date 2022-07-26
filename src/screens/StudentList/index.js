@@ -8,13 +8,12 @@ import Loading from '../../components/Loading'
 
 export default function StudentList({ navigation }) {
 
-
   const [studentlist, setStudentlist] = useState(null)
 
   const user = useContext(UserContext)
 
   const GetData = async () => {
-    const data = await studentData(user.studentId)
+    const data = await studentData(user._id, "small")
     setStudentlist(data)
   }
 
@@ -30,9 +29,12 @@ export default function StudentList({ navigation }) {
     return (
       <TouchableOpacity
         activeOpacity={0.10}
-        onPress={() => navigation.navigate('Diary', {
-          student: { id },
-        })}>
+        onPress={() => {
+          navigation.navigate('Diary', {
+            studentId: item._id
+          })
+        }}>
+
         <View style={styles.containerRender}>
 
           <View style={styles.mainContainer}>
@@ -77,6 +79,3 @@ export default function StudentList({ navigation }) {
 }
 
 
-// const 
-// navigation 
-//https://reactnavigation.org/docs/params/

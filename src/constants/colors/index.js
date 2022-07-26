@@ -26,5 +26,9 @@ export const white = { // certo // branco
     color0: '#FFFFFF'
 }
 export const GreyCard = { // card cinza clarinho
-    color10: '#F6F6F6'
+    color10: '#F6F6F6',
+    color20: '#E6E4E4',
+}
+export const LineBorderCard = {
+    color10: '#DADADA' // linha do card das atividades
 }

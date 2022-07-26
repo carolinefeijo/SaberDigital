@@ -1,4 +1,4 @@
-import { View, ScrollView, } from 'react-native';
+import { View, ScrollView  } from 'react-native';
 import { smallList } from '../../assets/data/mock';
 import React from 'react';
 import styles from './styles';
@@ -6,6 +6,7 @@ import TopBar from './components/TopBar';
 import WelcomeBar from './components/WelcomeBar/index.js';
 import News from './components/News';
 import SmallCard from './components/smallCard';
+
 
 export default function Home({ navigation }) {
   const detailedNews = () => {

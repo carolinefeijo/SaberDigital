@@ -17,11 +17,29 @@ export async function loginData(email, password) {
       return 'not authorized'
     })
 }
-export async function studentData(studentData) {
+export async function studentData(responsibleId, type) {
 
-  return await axios.post(`${baseUrl}/student/list`, {
-    studentId : studentData ,
-    
+  return await axios.get(`${baseUrl}/student/list/responsible`, {
+    params: {
+      responsibleId,
+      type
+    }
+  })
+    .then(async (response) => {
+      return response.data
+    }).catch((error) => {
+
+      return
+    })
+}
+
+export async function studentSingleData(studentId,type) {
+
+  return await axios.get(`${baseUrl}/student/list/single`, {
+    params: {
+      studentId,
+      type
+    }
   })
     .then(async (response) => {
       return response.data

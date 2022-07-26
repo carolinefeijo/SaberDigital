@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, TouchableOpacity, } from 'react-native'
+import { View, Text, FlatList, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 import styles from './styles'
 import DateNews from '../DateNews'
@@ -41,11 +41,11 @@ export default function SmallCard({ data, navigator }) {
   }
   return (
     <View >
-      <FlatList
-        data={data}
-        renderItem={renderSmallCard}
-        keyExtractor={(item) => item.id}
-      />
+        <FlatList
+          data={data}
+          renderItem={renderSmallCard}
+          keyExtractor={(item) => item.id}
+        />
     </View>
   )
 }

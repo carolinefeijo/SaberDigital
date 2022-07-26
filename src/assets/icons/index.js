@@ -20,3 +20,9 @@ export const iconEyeHide = require('../icons/loginInput/eyeHide.png')
 // MAIS USADOS 
 export const iconArrow = require('../icons/arrow.png');  // ICON  VOLTAR 
 export const iconCalendar = require('../icons/iconCalendar.png')
+
+// ICON DAS ATIVIDADES
+export const alimentacion = require('../icons/Activity/alimentacion.png') // icon para refeição
+export const extraClass = require('../icons/Activity/extra class.png') // icon aula extra
+export const sleep = require('../icons/Activity/sleep.png') // icon sono
+export const stars = require('../icons/Activity/stars.png') // icon estrelas 
