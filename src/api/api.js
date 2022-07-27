@@ -48,3 +48,21 @@ export async function studentSingleData(studentId,type) {
       return
     })
 }
+
+export async function getDiaryData(studentId, timeCreate) {
+
+  // console.log(timeCreate)
+  return await axios.get(`${baseUrl}/diary/list`, {
+    params: {
+     timeCreate,
+      studentId
+    }
+  })
+    .then(async (response) => {
+      //  console.log(response.data)
+      return response.data
+    }).catch((error) => {
+      console.log(error)
+      return
+    })
+}

@@ -3,38 +3,58 @@ import React, { useEffect, useState } from 'react'
 import styles from './styles'
 import TopBarTwo from '../../components/TopBarTwo'
 import ProfileStudent from './components/ProfileStudent'
-import { studentSingleData } from '../../api/api'
+import { getDiaryData, studentSingleData } from '../../api/api'
 import ListDates from '../../components/ListDates'
 import Card from './components/Card'
+import moment from 'moment'
 
 export default function Diary({ navigation, route }) {
+
   const { studentId } = route.params
 
   const [profile, setProfile] = useState(null)
+  const [diary, setDiary] = useState(null)
+
+  const day = moment().utc().format()
+  const [currentDay, setCurrentDay] = useState(day)
 
   const GetProfile = async () => {
     const data = await studentSingleData(studentId, 'small')
     setProfile(data)
   }
-  useEffect(() => {
-    GetProfile()
-  }, [])
 
-  const goBack = () => {
-    navigation.goBack()
+  const GetDiary = async (studentId, timeCreate) => {
+    const diary = await getDiaryData(studentId, timeCreate)
+     setDiary(diary) 
   }
+  const SetCurrentDay = (date) => setCurrentDay(date)
+
+  useEffect(() => {
+    const day = moment().utc().format()
+    GetDiary(studentId, currentDay)
+    console.log(day)
+
+    if(profile == null) GetProfile()
+  
+  }, [currentDay])
+
+  const goBack = () => navigation.goBack()
+
+
   return (
     <View style={styles.container}>
       <TopBarTwo navigator={goBack} title={"Diario"} />
-      <ScrollView  showsVerticalScrollIndicator={false} style={{ marginBottom: 10 }} >
+      
+      <ScrollView showsVerticalScrollIndicator={false} style={{ marginBottom: 10 }} >
         {profile != null && <ProfileStudent profile={profile} />}
-        <ListDates />
-        <FlatList
-          data={dates}
-          renderItem={Card}
-          keyExtractor={(item) => item}
-           />
+        <ListDates SetCurrentDay={SetCurrentDay} />
+   
+        {diary?.map((item, key) => {
+          return <Card key={key} item={item} />
+        })
+        }
       </ScrollView>
+      
     </View>
   )
 }
@@ -53,56 +73,6 @@ export default function Diary({ navigation, route }) {
 // QUANDO ESTIVER UM DIA A FRENTE ( DIA SEGUINTE) , VAI TER UMA MENSAGEM DE  "NÃOO HÁ ATIVIDADES AINDA" . 
 
 
-
-
-
-
-
-const dates = [
-  {
-    Activity: 'Alimentação',
-    icon: require('../../assets/icons/Activity/alimentacion.png'),
-    Details: 'Café da manhã',
-    hour: "12:30",
-    stars: require('../../assets/icons/Activity/stars.png'),
-    eye: require('../../assets/icons/Activity/eye.png')
-  },
-
-  {
-    Activity: 'Alimentação',
-    icon: require('../../assets/icons/Activity/alimentacion.png'),
-    Details: 'Café da manhã',
-    hour: "12:30",
-    stars: require('../../assets/icons/Activity/stars.png'),
-    eye: require('../../assets/icons/Activity/eye.png')
-  },
-
-  {
-    Activity: 'Alimentação',
-    icon: require('../../assets/icons/Activity/alimentacion.png'),
-    Details: 'Café da manhã',
-    hour: "12:30",
-    stars: require('../../assets/icons/Activity/stars.png'),
-    eye: require('../../assets/icons/Activity/eye.png')
-  },
-
-  {
-    Activity: 'Alimentação',
-    icon: require('../../assets/icons/Activity/alimentacion.png'),
-    Details: 'Café da manhã',
-    hour: "12:30",
-    stars: require('../../assets/icons/Activity/stars.png'),
-    eye: require('../../assets/icons/Activity/eye.png')
-  },
-
-  {
-    Activity: 'Alimentação',
-    icon: require('../../assets/icons/Activity/alimentacion.png'),
-    Details: 'Café da manhã',
-    hour: "12:30",
-    stars: require('../../assets/icons/Activity/stars.png'),
-    eye: require('../../assets/icons/Activity/eye.png')
-  },
-]
+// organizar as coisas de erro 
 
 

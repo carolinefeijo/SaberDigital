@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 export default function Card({ item }) {
+    console.log(item)
     return (
         <View style={styles.container}>
 
@@ -25,13 +26,13 @@ export default function Card({ item }) {
                     <View style={{ flexDirection: 'column', width: '80%', height: 80, }}>
 
                         <View style={styles.containerActivity}>
-                            <Text style={styles.titleDay}>{item.Activity}</Text>
+                            <Text style={styles.titleDay}>{item.title}</Text>
                             <Image style={styles.Icon}
                                 source={item.icon} />
                         </View>
 
                         <View style={{ paddingHorizontal: 8, marginTop: 5 }}>
-                            <Text style={styles.titleDetails}>{item.Details}</Text>
+                            <Text style={styles.titleDetails}>{item.details}</Text>
                         </View>
 
                         <View style={{ paddingHorizontal: 8, marginTop: 10 }}>

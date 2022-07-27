@@ -1,13 +1,17 @@
 import { View, FlatList, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import styles from './styles'
+import {getCurrentWeekDays} from '../../helpers'
 
-export default function ListDates() {
+export default function ListDates({SetCurrentDay}) {
+
+  const listDays = getCurrentWeekDays();
+
   function renderItem({ item }) {
     return (
       <View style={styles.container}>
         <TouchableOpacity
-          onPress={() => { }}>
+          onPress={() => {SetCurrentDay(item.date) }}>
           <View style={styles.mainContainer}>
             <Text style={styles.titleDay}>{item.label}</Text>
             <Text style={styles.titleNumber}> {item.day}</Text>
@@ -20,40 +24,12 @@ export default function ListDates() {
   return (
     <View style={styles.ViewFlatlist}>
       <FlatList
-        data={dates}
+        data={listDays}
         renderItem={renderItem}
-        keyExtractor={(item) => item}
+        keyExtractor={(item) => item.day}
         horizontal={true}
         showsHorizontalScrollIndicator={false} />
     </View>
   )
 }
 
-// deixa com styles border azul quando estiver naquele dia e renderiza aquele dia as informações
-const dates = [
-  {
-    id: '24/12/2008t:00:00',
-    day: '20',
-    label: 'Seg'
-  },
-  {
-    id: '24/12/2008t:00:00',
-    day: '21',
-    label: 'Ter'
-  },
-  {
-    id: '24/12/2008t:00:00',
-    day: '22',
-    label: 'Qua'
-  },
-  {
-    id: '24/12/2008t:00:00',
-    day: '23',
-    label: 'Qui'
-  },
-  {
-    id: '24/12/2008t:00:00',
-    day: '24',
-    label: 'Qui'
-  }
-]
