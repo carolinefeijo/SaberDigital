@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './styles'
 
 export default function Card({ item }) {
-    console.log(item)
+    
     return (
         <View style={styles.container}>
 
@@ -34,11 +34,11 @@ export default function Card({ item }) {
                         <View style={{ paddingHorizontal: 8, marginTop: 5 }}>
                             <Text style={styles.titleDetails}>{item.details}</Text>
                         </View>
-
+                        {/* 
                         <View style={{ paddingHorizontal: 8, marginTop: 10 }}>
                             <Image style={styles.iconStars}
                                 source={item.stars} />
-                        </View>
+                        </View> */}
 
 
                     </View>

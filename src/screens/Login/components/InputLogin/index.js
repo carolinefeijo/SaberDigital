@@ -4,7 +4,7 @@ import styles from './styles'
 import * as C from '../../../../constants/colors'
 import { iconEye, iconEyeHide } from '../../../../assets/icons'
 
-export default function InputLogin({ email, setEmail, password, SetPassword }) {
+export default function InputLogin({ email, setEmail, password, SetPassword,}) {
     const [security, setSecurity] = useState(true)
     return (
         <View style={styles.container}>

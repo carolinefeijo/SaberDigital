@@ -14,17 +14,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: C.GreyCard.color10,
         borderRadius: 5,
-        borderWidth: 1,
-        borderColor: C.blue.color10
-    },
-    borderBlueContainer: {
-        borderWidth: 0.1,
-        borderColor: 'blue'
     },
     titleDay: {
         marginTop: 4,
         marginRight: 2,
-        fontFamily: 'Quicksand-Light',
+        fontFamily: 'Quicksand-Regular',
         fontSize: 8,
         color: C.darkGrey.color10
     },
@@ -34,6 +28,31 @@ const styles = StyleSheet.create({
         fontSize: 13,
         color: C.darkGrey.color10
     },
+    currentContainer: { // container azul
+        width: 45,
+        height: 45,
+        alignItems: 'center',
+        backgroundColor: C.blue.color10,
+        borderRadius: 5,
+    },
+    titleDayWhite: {
+        marginTop: 4,
+        marginRight: 2,
+        fontFamily: 'Quicksand-Medium',
+        fontSize: 9,
+        color: C.white.color0
+    },
+    titleNumberWhite: {
+        marginRight: 3,
+        fontFamily: 'Quicksand-Medium',
+        fontSize: 13,
+        color: C.white.color0
+    },
+    borderBlueContainer: {
+        borderWidth: 0.1,
+        borderColor: 'blue'
+    },
+   
     ViewFlatlist: {
         alignItems: 'center',
         justifyContent: 'center'
