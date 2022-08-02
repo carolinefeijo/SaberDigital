@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
         marginTop: 20
     },
     title: {
-        fontFamily: 'Quicksand-Medium',
-        fontSize: 14,
+        fontFamily: 'Quicksand-SemiBold',
+        fontSize: 15,
         color: C.darkGrey.color10
     },
     imageProfile: {

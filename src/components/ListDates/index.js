@@ -4,11 +4,11 @@ import styles from './styles'
 import moment from 'moment'
 import { getCurrentWeekDays } from '../../helpers'
 
-export default function ListDates({ SetCurrentDay, currentDay}) {
+export default function ListDates({ SetCurrentDay, currentDay }) {
   function isSameDay(date) {
     return moment(currentDay).isSame(date, 'day')
   }
-
+  
   const listDays = getCurrentWeekDays();
 
   function renderItem({ item }) {

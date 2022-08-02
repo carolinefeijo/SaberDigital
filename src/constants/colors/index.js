@@ -23,7 +23,8 @@ export const red = {   // certo // vermelho
     color10: '#EA1B1B'
 }
 export const white = { // certo // branco
-    color0: '#FFFFFF'
+    color0: '#FFFFFF',
+    color10: '#FCFCFC'
 }
 export const GreyCard = { // card cinza clarinho
     color10: '#F6F6F6',

@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
         marginRight: 2,
         fontFamily: 'Quicksand-Regular',
         fontSize: 8,
-        color: C.darkGrey.color10
+        color: C.darkGrey.color10,
+        textTransform:'capitalize'
     },
     titleNumber: {
         marginRight: 3,
@@ -40,13 +41,15 @@ const styles = StyleSheet.create({
         marginRight: 2,
         fontFamily: 'Quicksand-Medium',
         fontSize: 9,
-        color: C.white.color0
+        color: C.white.color0,
+        textTransform:'capitalize'
     },
     titleNumberWhite: {
         marginRight: 3,
         fontFamily: 'Quicksand-Medium',
         fontSize: 13,
-        color: C.white.color0
+        color: C.white.color0,
+        
     },
     borderBlueContainer: {
         borderWidth: 0.1,
