@@ -11,6 +11,7 @@ import moment from 'moment'
 import { useIsFocused } from "@react-navigation/native";
 import ModalImage from './components/ModalImage'
 import WarningMessage from './components/WarningMessage'
+import WithoutInternet from '../../components/WithoutInternet'
 
 
 export default function Diary({ navigation, route, item }) {
@@ -95,7 +96,8 @@ export default function Diary({ navigation, route, item }) {
                   </>
 
                   :
-                  <WarningMessage /> // mensagem de não tem atividade component 
+                  // <WarningMessage /> // mensagem de não tem atividade component 
+                  <WithoutInternet />
                 :
 
                 <View style={{ marginTop: 50 }}>
