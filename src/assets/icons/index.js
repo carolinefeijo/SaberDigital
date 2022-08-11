@@ -31,8 +31,11 @@ export const fall = require('../icons/Activity/fall.png') // icon Ocorrencia
 export const sleep = require('../icons/Activity/sleep.png') // icon sono
 export const Cheers = require('../icons/Activity/Cheers.png') // icon  sintomas 
 export const solicitation = require('../icons/Activity/solicitation.png') //icon solicitation
-
+export const error = require('../icons/Activity/error.png')
 
 // star icons
 export const starYellow = require('../icons/Activity/starYellow.png') // icon estrela amarela
 export const starGray = require('../icons/Activity/starGray.png') // icon estrela cinza
+
+// home 
+export const net = require('../icons/home/internet/net.png') // signal internet 

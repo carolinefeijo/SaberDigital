@@ -7,7 +7,6 @@ import { studentData } from '../../api/api'
 import Loading from '../../components/Loading'
 
 export default function StudentList({ navigation }) {
-
   const [studentlist, setStudentlist] = useState(null)
 
   const user = useContext(UserContext)

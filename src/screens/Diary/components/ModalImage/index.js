@@ -4,7 +4,7 @@ import Modal from "react-native-modal";
 import { agendaescolarLogo } from '../../../../assets/images';
 import styles from './styles';
 
-export default function ModalImage({ modalImageController, disableModal, image, description }) {
+export default function ModalImage({  modalImageController, disableModal, image, description }) {
     return (
         <Modal
             animationIn={'zoomIn'}
@@ -27,7 +27,7 @@ export default function ModalImage({ modalImageController, disableModal, image, 
                     source={{ uri: image }} />
 
                 <View style={styles.descriptionContainer}>
-                    <Text style={styles.titleDescription}> Comeu bastante fruta e ainda  repetiu e ficou brava porque não demos mais que 3 pedaços.</Text>
+                    <Text style={styles.titleDescription}> {description}</Text>
                 </View>
 
             </View>
@@ -38,6 +38,4 @@ export default function ModalImage({ modalImageController, disableModal, image, 
 };
 
 
-// VERIFICAR DESCRIPTION BACK END ( LENO VAI VERIFICAR ) 
-// ARRUMAR A HORA PARA HORA DO BRASIL ( 12:40)
-// ARRUMAR "A 12 HORAS ATRAS" FORMATAR PARA O BRASIL ( 2 HORAS ATRÁS )
+

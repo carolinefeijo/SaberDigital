@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderWidth: 1,
         width: '93%',
-        height: 100,
+        height: 95,
         borderRadius: 15,
         borderColor: C.LineBorderCard.color10,
     },
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         width: 60,
         height: 60,
-        marginTop: 22,
+        marginTop: 22,  
     },
     iconEye: {
         width: 15,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     lineView: {
         backgroundColor: C.LineBorderCard.color10,
         width: 1,
-        height: 98
+        height: 94
     },
     mainCardContainer: {
         paddingHorizontal: 8,
@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 10,
         justifyContent: 'space-between',
-      
     },
     titleDay: {
         fontFamily: 'Quicksand-Medium',

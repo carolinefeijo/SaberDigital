@@ -1,4 +1,4 @@
-import { View, FlatList, ScrollView } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Loading from '../../components/Loading'
 import styles from './styles'
@@ -10,10 +10,10 @@ import Card from './components/Card'
 import moment from 'moment'
 import { useIsFocused } from "@react-navigation/native";
 import ModalImage from './components/ModalImage'
+import WarningMessage from './components/WarningMessage'
 
 
-export default function Diary({ navigation, route }) {
-
+export default function Diary({ navigation, route, item }) {
   const focus = useIsFocused();
 
   const { studentId } = route.params
@@ -66,7 +66,6 @@ export default function Diary({ navigation, route }) {
       setProfile(null)
     }
 
-
   }, [currentDay, focus])
 
   const goBack = () => navigation.goBack()
@@ -87,34 +86,32 @@ export default function Diary({ navigation, route }) {
               <ListDates SetCurrentDay={SetCurrentDay} currentDay={currentDay} day={day} />
 
               {diary != "loading" ?
-                <>
-                  {diary?.map((item, key) => {
-                    return <Card key={key} item={item} enableModal={enableModal} />
-                  })
-                  }
-                </>
+                diary != "" ?
+                  <>
+                    {diary?.map((item, key) => {
+                      return <Card key={key} item={item} enableModal={enableModal} />
+                    })
+                    }
+                  </>
+
+                  :
+                  <WarningMessage /> // mensagem de não tem atividade component 
                 :
+
                 <View style={{ marginTop: 50 }}>
                   <Loading />
                 </View>
-
               }
 
             </ScrollView>
           </>
+
           :
           <Loading />
         }
-
-
 
       </View>
     </>
   )
 }
-
-// toda vez que sair e entrar novamente , carrega as informaçoes solicitadas . ( aluno adriana com informações dela).
-// verificar se existe imagem , se tiver imagem na atividade, mostra o eye , se não tiver não mostra (condição).
-// arrumar a data correta e arrumar a hora correta 
-
 

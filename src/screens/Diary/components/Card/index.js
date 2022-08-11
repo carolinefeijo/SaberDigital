@@ -19,11 +19,12 @@ export default function Card({ item, enableModal }) {
                             onPress={() => { enableModal(item.image, item.description) }}>
                             <Image style={styles.iconEye}
                                 source={iconEye} />
+
                         </TouchableOpacity>
                     }
                     <Text style={styles.titleHour}>{formatHour(item.timeCreate)}</Text>
                 </View>
-
+                
                 <View style={styles.lineView}></View>
 
                 <View style={styles.mainCardContainer}>
