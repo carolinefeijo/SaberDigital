@@ -4,7 +4,8 @@ import Modal from "react-native-modal";
 import { agendaescolarLogo } from '../../../../assets/images';
 import styles from './styles';
 
-export default function ModalImage({  modalImageController, disableModal, image, description }) {
+export default function ModalImage({ modalImageController, disableModal, image, description}) {
+
     return (
         <Modal
             animationIn={'zoomIn'}

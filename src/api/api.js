@@ -55,7 +55,8 @@ export async function getDiaryData(studentId, timeCreate) {
   return await axios.get(`${baseUrl}/diary/list`, {
     params: {
      timeCreate,
-      studentId
+      studentId,
+   
     }
   })
     .then(async (response) => {

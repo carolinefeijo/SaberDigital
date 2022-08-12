@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, ScrollView, Text } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Loading from '../../components/Loading'
 import styles from './styles'
@@ -11,10 +11,12 @@ import moment from 'moment'
 import { useIsFocused } from "@react-navigation/native";
 import ModalImage from './components/ModalImage'
 import WarningMessage from './components/WarningMessage'
-import WithoutInternet from '../../components/WithoutInternet'
+import CustomNoNews from '../../components/CustomNoNews'
 
 
-export default function Diary({ navigation, route, item }) {
+
+export default function Diary({ navigation, route }) {
+ 
   const focus = useIsFocused();
 
   const { studentId } = route.params
@@ -96,8 +98,8 @@ export default function Diary({ navigation, route, item }) {
                   </>
 
                   :
-                  // <WarningMessage /> // mensagem de não tem atividade component 
-                  <WithoutInternet />
+                  <WarningMessage title={"Nenhuma atividade lançada até o momento"} /> // mensagem de não tem atividade component 
+                  
                 :
 
                 <View style={{ marginTop: 50 }}>
