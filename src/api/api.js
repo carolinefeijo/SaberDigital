@@ -50,8 +50,7 @@ export async function studentSingleData(studentId,type) {
 }
 
 export async function getDiaryData(studentId, timeCreate) {
-
-  // console.log(timeCreate)
+  
   return await axios.get(`${baseUrl}/diary/list`, {
     params: {
      timeCreate,

@@ -15,12 +15,13 @@ import CustomDrawer from '../CustomDrawer';
 import StudentList from '../../screens/StudentList'
 import { drawerIconHome, drawerIconBook, drawerIconChat, drawerIconMenu, drawerIconNotification, drawerIconCalendario } from '../../assets/icons';
 import UserContext from '../../context/UserContext';
+import Loading from '../Loading';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 export default function DrawerNavigator() {
-    const user = useContext(UserContext);
+
     return (
         <Drawer.Navigator
             drawerContent={props => <CustomDrawer {...props} />}
@@ -52,26 +53,15 @@ export default function DrawerNavigator() {
                 options={{
                     headerShown: false,
                     drawerIcon: () => (
-                        <Image style={{ width: 18, height: 20, }}
-                            source={drawerIconHome} />
-                    ),
-                    drawerItemStyle: { display: 'none' }
-                }}
-                name="Diary"
-                component={Diary}
-             
-            />
-
-            <Drawer.Screen
-                options={{
-                    headerShown: false,
-                    drawerIcon: () => (
-                        <Image style={{ width: 18, height: 15 }}
+                        <Image style={{ width: 18, height: 15.16, }}
                             source={drawerIconBook} />
-                    )
+                    ),
+
                 }}
                 name="Diario"
-                component={user.studentId.length > 1 ? StudentList : Diary} />
+                component={DiaryScreens}
+
+            />
 
             <Drawer.Screen
                 options={{
@@ -125,3 +115,36 @@ export default function DrawerNavigator() {
         </Drawer.Navigator>
     )
 }
+
+export function DiaryScreens() {
+
+    const user = useContext(UserContext);
+    const { studentId } = user
+    const initialRoute = studentId.length > 1 ? "StudentList" : "Diary"
+
+    return (
+        <Stack.Navigator
+            initialRouteName={initialRoute}>
+
+            <Stack.Screen
+                options={{
+                    headerShown: false
+
+                }}
+                name="StudentList"
+                component={StudentList}
+            />
+
+            <Stack.Screen
+                options={{
+                    headerShown: false
+                }}
+                name="Diary"
+                component={Diary}
+                initialParams={{ studentId }}
+            />
+        </Stack.Navigator>
+    )
+}
+
+// receber studentId para pegar as informações do aluno daquele pai que so tem 1 filho 

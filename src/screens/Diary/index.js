@@ -11,15 +11,13 @@ import moment from 'moment'
 import { useIsFocused } from "@react-navigation/native";
 import ModalImage from './components/ModalImage'
 import WarningMessage from './components/WarningMessage'
-import CustomNoNews from '../../components/CustomNoNews'
-
-
 
 export default function Diary({ navigation, route }) {
- 
+
   const focus = useIsFocused();
 
-  const { studentId } = route.params
+  const { studentId } = route.params;
+
 
   const [profile, setProfile] = useState(null)
   const [diary, setDiary] = useState(null)
@@ -99,7 +97,7 @@ export default function Diary({ navigation, route }) {
 
                   :
                   <WarningMessage title={"Nenhuma atividade lançada até o momento"} /> // mensagem de não tem atividade component 
-                  
+
                 :
 
                 <View style={{ marginTop: 50 }}>
@@ -109,7 +107,6 @@ export default function Diary({ navigation, route }) {
 
             </ScrollView>
           </>
-
           :
           <Loading />
         }
